@@ -1,0 +1,514 @@
+/*--Botones--*/
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+    border: none;
+    border-radius: var(--radio);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: var(--verde-claro);
+    transform: scale(1.03);
+}
+
+.btn--outline {
+    background: transparent;
+    color: var(--verde-oscuro);
+    border: 2px solid var(--verde-oscuro);
+}
+
+.btn--outline:hover {
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+}
+
+/*--Tarjeta--*/
+.card {
+    background: var(--blanco);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.card__body .btn {
+    margin-top: auto;
+    text-align: center;
+}
+
+
+
+
+/*-- COMPONENTES DE CATÁLOGO-- */
+
+
+
+/* Buscador superior */
+.input-search {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.8rem 1.2rem;
+  border: 2px solid transparent;
+  background: var(--blanco);
+  border-radius: 50px;
+  box-shadow: var(--sombra);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-search:focus {
+  border-color: var(--verde-oscuro);
+}
+
+/* Grupos del barra lateral*/
+.filtro-grupo {
+  border: none;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.filtro-grupo__titulo {
+  font-weight: 600;
+  color: var(--verde-oscuro);
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.filtro-opcion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.filtro-opcion input {
+  accent-color: var(--verde-oscuro);
+}
+
+.input-range {
+  width: 100%;
+  accent-color: var(--verde-oscuro);
+  cursor: pointer;
+}
+
+.rango-valores {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--gris);
+}
+
+/* Adaptación de Card de Producto */
+.card--producto {
+  position: relative;
+}
+
+.card__categoria {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--gris);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.card__titulo {
+  font-size: 1.05rem;
+}
+
+.card__precio {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+  margin-top: 0.2rem;
+}
+.btn--small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Insignias de Stock */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--blanco);
+  z-index: 2;
+}
+
+.badge--stock {
+  background: var(--verde-oscuro);
+}
+
+.badge--agotado {
+  background: var(--rojo);
+}
+
+/* Botón Favorito Interactivo */
+.fav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-favorito {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 1rem;
+  color: var(--gris);
+  transition: transform 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+
+.btn-favorito:hover {
+  transform: scale(1.15);
+}
+
+/* Al marcar el checkbox oculto, el corazón cambia a rojo */
+.fav-toggle:checked + .btn-favorito {
+  color: var(--rojo);
+}
+
+/* Soporte :active adicional */
+.btn-favorito:active {
+  transform: scale(0.9);
+}
+
+/* Paginación Visual */
+.paginacion {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.paginacion__lista {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.paginacion__btn,
+.paginacion__link {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  background: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.paginacion__link--active,
+.paginacion__link:hover:not(.paginacion__link--active),
+.paginacion__btn:hover:not(.paginacion__btn--disabled) {
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+}
+
+.paginacion__btn--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/*-- COMPONENTES DE SOBRE NOSOTROS --*/
+.historia__texto .badge {
+  position: static;
+  display: inline-block;
+}
+
+.principio-card {
+  background: var(--blanco);
+  padding: 1.8rem 1.4rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.principio-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.3rem;
+}
+
+.testimonio-card {
+  background: var(--blanco);
+  padding: 1.8rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+  min-width: 280px;
+  flex: 0 0 85%;
+  scroll-snap-align: center;
+}
+
+@media (min-width: 600px) {
+  .testimonio-card {
+    flex: 0 0 48%;
+  }
+}
+
+@media (min-width: 900px) {
+  .testimonio-card {
+    min-width: 0;
+    flex: 1;
+  }
+}
+
+.testimonio-estrellas {
+  color: #f39c12;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.testimonio-texto {
+  font-style: italic;
+  color: var(--texto);
+}
+
+.testimonio-autor {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: auto;
+}
+
+.testimonio-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.testimonio-autor h4 {
+  color: var(--verde-oscuro);
+  font-size: 1rem;
+}
+
+.testimonio-autor span {
+  font-size: 0.85rem;
+  color: var(--gris);
+}
+
+/*-- COMPONENTES DE CONTACTO --*/
+.contacto-card,
+.ubicacion-card {
+  background: var(--blanco);
+  padding: 2rem 1.5rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.contacto-nota {
+  color: var(--gris);
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-grupo label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--texto);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #dfe6e9;
+  border-radius: var(--radio);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--texto);
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.form-control:focus {
+  background: var(--blanco);
+}
+
+/* Validación visual con :valid e :invalid */
+.form-control:invalid {
+  border-color: var(--rojo);
+}
+
+.form-control:valid {
+  border-color: var(--verde-oscuro);
+  background: #f4fbf7;
+}
+
+.form-control:focus:invalid {
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.18);
+}
+
+.form-control:focus:valid {
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.2);
+}
+
+.form-ayuda {
+  font-size: 0.8rem;
+  color: var(--gris);
+}
+
+.form-control:invalid + .form-ayuda {
+  color: var(--rojo);
+}
+
+.form-control:valid + .form-ayuda {
+  color: var(--verde-oscuro);
+}
+
+.btn--full {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+/* Mensaje de confirmación sin JS usando :target */
+.alerta-exito {
+  display: none;
+  padding: 0.9rem 1rem;
+  background: #e8f8f0;
+  border: 2px solid var(--verde-oscuro);
+  border-radius: var(--radio);
+  color: var(--verde-oscuro);
+  font-weight: 600;
+  text-align: center;
+}
+
+.alerta-exito:target {
+  display: block;
+}
+
+/* Mapa de ubicación e info */
+.mapa-contenedor {
+  margin: 1.2rem 0;
+  border-radius: var(--radio);
+  overflow: hidden;
+  border: 2px solid #e8f8f0;
+}
+
+.mapa-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mapa-caption {
+  padding: 0.65rem 1rem;
+  background: #f4fbf7;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--verde-oscuro);
+  text-align: center;
+}
+
+.info-contacto-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+}
+
+.info-item strong {
+  color: var(--verde-oscuro);
+}
+
+.redes-contacto h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.redes-iconos {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.red-social-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #e8f8f0;
+  color: var(--verde-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--sombra);
+}
+
+.red-social-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+
+
