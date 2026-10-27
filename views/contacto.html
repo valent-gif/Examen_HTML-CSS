@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctanos en EcoMarket. Estamos en Bucaramanga listos para ayudarte a vivir de forma más sostenible.">
+  <title>EcoMarket | Contacto</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <!-- Encabezado común -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="../index.html" class="logo">🌿 EcoMarket</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="sobre-nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header__acciones">
+        <a href="productos.html#buscador" aria-label="Buscar"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg></a>
+        <a href="#" aria-label="Carrito"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="contacto-page">
+    <section class="contacto-encabezado">
+      <h1>Contáctanos</h1>
+      <p>¿Tienes preguntas sobre nuestros productos ecológicos o pedidos mayoristas? Escríbenos y te responderemos pronto.</p>
+    </section>
+
+    <div class="contacto-grid">
+      <!-- Formulario Inteligente con Validación Visual (:valid / :invalid) -->
+      <section class="contacto-card" aria-labelledby="titulo-formulario">
+        <h2 id="titulo-formulario">Envíanos un mensaje</h2>
+        <p class="contacto-nota">Los campos se validan automáticamente en tiempo real.</p>
+
+        <form class="formulario-contacto" action="#mensaje-enviado">
+          <div class="form-grupo">
+            <label for="nombre">Nombre completo *</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              class="form-control"
+              placeholder="Ej. Valentina Rojas"
+              minlength="3"
+              required
+            >
+            <span class="form-ayuda">Ingresa al menos 3 caracteres.</span>
+          </div>
+
+          <div class="form-grupo">
+            <label for="email">Correo electrónico *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="ejemplo@correo.com"
+              required
+            >
+            <span class="form-ayuda">Ingresa un correo válido (ej. usuario@dominio.com).</span>
+          </div>
+
+          <div class="form-grupo">
+            <label for="mensaje">Mensaje *</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              class="form-control"
+              placeholder="Cuéntanos cómo podemos ayudarte..."
+              minlength="10"
+              required
+            ></textarea>
+            <span class="form-ayuda">Escribe un mensaje de mínimo 10 caracteres.</span>
+          </div>
+
+          <button type="submit" class="btn btn--full">Enviar mensaje</button>
+
+          <p id="mensaje-enviado" class="alerta-exito">
+            ¡Gracias por escribirnos! Hemos recibido tu mensaje correctamente.
+          </p>
+        </form>
+      </section>
+
+      <!-- Mapa de Ubicación e Información + Redes Sociales -->
+      <section class="ubicacion-card" aria-labelledby="titulo-ubicacion">
+        <h2 id="titulo-ubicacion">Nuestra Ubicación</h2>
+        <p>Visítanos en nuestra tienda física en Bucaramanga y trae tus envases para recarga sostenible.</p>
+
+        <figure class="mapa-contenedor">
+          <img
+            src="../img/hero/mapa-ubicacion.svg"
+            alt="Mapa de ubicación de EcoMarket en Carrera 33 #45-12, Cabecera, Bucaramanga"
+            class="mapa-img"
+          >
+          <figcaption class="mapa-caption">📍 Cra. 33 #45-12, Barrio Cabecera, Bucaramanga - Santander</figcaption>
+        </figure>
+
+        <div class="info-contacto-lista">
+          <div class="info-item">
+            <strong>Horario de atención:</strong>
+            <span>Lunes a Sábado: 8:00 a.m. – 7:00 p.m.</span>
+          </div>
+          <div class="info-item">
+            <strong>Correo y Teléfono:</strong>
+            <span>contacto@ecomarket.com · (+57) 315 800 4520</span>
+          </div>
+        </div>
+
+        <div class="redes-contacto">
+          <h3>Síguenos en Redes Sociales</h3>
+          <div class="redes-iconos">
+            <a href="#" class="red-social-btn" aria-label="Facebook" title="Facebook">
+              <img src="../img/icons/facebook.svg" alt="Facebook">
+            </a>
+            <a href="#" class="red-social-btn" aria-label="Instagram" title="Instagram">
+              <img src="../img/icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="#" class="red-social-btn" aria-label="X (Twitter)" title="X">
+              <img src="../img/icons/x.svg" alt="X">
+            </a>
+            <a href="#" class="red-social-btn" aria-label="WhatsApp" title="WhatsApp">
+              <img src="../img/icons/whatsapp.svg" alt="WhatsApp">
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer común -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <h3>EcoMarket</h3>
+        <p>Bucaramanga, Colombia</p>
+        <p>contacto@ecomarket.com</p>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Síguenos</h3>
+        <ul class="redes">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__copy">© 2026 EcoMarket. Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
+

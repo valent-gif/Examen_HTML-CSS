@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de productos ecológicos y sustentables en EcoMarket.">
+  <title>EcoMarket | Catálogo de Productos</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <!-- Encabezado común -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="../index.html" class="logo">🌿 EcoMarket</a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html" class="active">Productos</a></li>
+          <li><a href="sobre-nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__acciones">
+        <a href="#buscador" aria-label="Buscar">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+        </a>
+        <a href="#" aria-label="Carrito">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="catalogo-layout">
+    <!-- Barra superior de búsqueda -->
+    <section class="buscador-bar" id="buscador">
+      <div class="buscador-bar__inner">
+        <input type="search" class="input-search" placeholder="Buscar productos ecológicos..." aria-label="Buscar productos">
+      </div>
+    </section>
+
+    <div class="catalogo-contenido">
+      <!-- Sidebar de Filtros (Sticky) comentado para mostrar solo las 20 tarjetas
+      <aside class="sidebar-filtros" aria-label="Filtros de productos">
+        <h2 class="sidebar-filtros__titulo">Filtros</h2>
+
+        <fieldset class="filtro-grupo">
+          <legend class="filtro-grupo__titulo">Categorías</legend>
+          <label class="filtro-opcion"><input type="checkbox"> Hogar</label>
+          <label class="filtro-opcion"><input type="checkbox"> Moda</label>
+          <label class="filtro-opcion"><input type="checkbox"> Cuidado Personal</label>
+          <label class="filtro-opcion"><input type="checkbox"> Alimentos</label>
+        </fieldset>
+
+        <div class="filtro-grupo">
+          <label for="precio-rango" class="filtro-grupo__titulo">Precio Máximo</label>
+          <input type="range" id="precio-rango" min="5000" max="150000" step="5000" class="input-range">
+          <div class="rango-valores">
+            <span>$5.000</span>
+            <span>$150.000</span>
+          </div>
+        </div>
+
+        <fieldset class="filtro-grupo">
+          <legend class="filtro-grupo__titulo">Disponibilidad</legend>
+          <label class="filtro-opcion"><input type="radio" name="disponibilidad" checked> Todos</label>
+          <label class="filtro-opcion"><input type="radio" name="disponibilidad"> En Stock</label>
+          <label class="filtro-opcion"><input type="radio" name="disponibilidad"> Agotados</label>
+        </fieldset>
+      </aside>
+      -->
+
+      <!-- Grid de 20 Productos -->
+      <section class="catalogo-grid-container" aria-label="Lista de productos">
+        <div class="grid-productos">
+
+          <!-- Tarjeta 1 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-1" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-1" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Botella_Reutilizable.webp" alt="Botella Reutilizable">
+            <div class="card__body">
+              <span class="card__categoria">Hogar</span>
+              <h3 class="card__titulo">Botella Reutilizable</h3>
+              <p class="card__precio">$45.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-2" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-2" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Bolsa_de_tela.webp" alt="Bolsa de Tela">
+            <div class="card__body">
+              <span class="card__categoria">Moda</span>
+              <h3 class="card__titulo">Bolsa de Tela</h3>
+              <p class="card__precio">$18.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--agotado">Agotado</span>
+            <input type="checkbox" id="fav-3" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-3" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Capillo_de_Bambu.webp" alt="Cepillo de Bambú">
+            <div class="card__body">
+              <span class="card__categoria">Cuidado Personal</span>
+              <h3 class="card__titulo">Cepillo de Bambú</h3>
+              <p class="card__precio">$12.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 4 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-4" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-4" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Cafe_Organico.jpg" alt="Café Orgánico">
+            <div class="card__body">
+              <span class="card__categoria">Alimentos</span>
+              <h3 class="card__titulo">Café Orgánico</h3>
+              <p class="card__precio">$28.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 5 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-5" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-5" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Jabon_Artesanl.jpg" alt="Jabón Artesanal">
+            <div class="card__body">
+              <span class="card__categoria">Cuidado Personal</span>
+              <h3 class="card__titulo">Jabón Artesanal</h3>
+              <p class="card__precio">$14.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 6 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-6" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-6" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Envases_de_Vidrio.jpg" alt="Envases de Vidrio">
+            <div class="card__body">
+              <span class="card__categoria">Hogar</span>
+              <h3 class="card__titulo">Envases de Vidrio</h3>
+              <p class="card__precio">$52.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 7 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-7" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-7" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Accesorios_Compostables_Moviles.webp" alt="Accesorios Compostables Móviles">
+            <div class="card__body">
+              <span class="card__categoria">Moda</span>
+              <h3 class="card__titulo">Accesorios Compostables Móviles</h3>
+              <p class="card__precio">$38.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 8 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--agotado">Agotado</span>
+            <input type="checkbox" id="fav-8" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-8" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Acondicionador_Solido.webp" alt="Acondicionador Sólido">
+            <div class="card__body">
+              <span class="card__categoria">Cuidado Personal</span>
+              <h3 class="card__titulo">Acondicionador Sólido</h3>
+              <p class="card__precio">$24.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 9 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-9" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-9" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Chips_de_Fruta_deshidratada.webp" alt="Chips de Fruta Deshidratada">
+            <div class="card__body">
+              <span class="card__categoria">Alimentos</span>
+              <h3 class="card__titulo">Chips de Fruta Deshidratada</h3>
+              <p class="card__precio">$16.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 10 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-10" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-10" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Collar_Cuero_Vegano.webp" alt="Collar de Cuero Vegano">
+            <div class="card__body">
+              <span class="card__categoria">Moda</span>
+              <h3 class="card__titulo">Collar de Cuero Vegano</h3>
+              <p class="card__precio">$35.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 11 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-11" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-11" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Copitos_de_Bambu.webp" alt="Copitos de Bambú">
+            <div class="card__body">
+              <span class="card__categoria">Cuidado Personal</span>
+              <h3 class="card__titulo">Copitos de Bambú</h3>
+              <p class="card__precio">$10.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 12 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-12" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-12" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Detergente_Ropa_Bioidegradable.webp" alt="Detergente de Ropa Biodegradable">
+            <div class="card__body">
+              <span class="card__categoria">Hogar</span>
+              <h3 class="card__titulo">Detergente Biodegradable</h3>
+              <p class="card__precio">$32.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 13 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-13" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-13" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Discos_desmaquillantes.jpg" alt="Discos Desmaquillantes">
+            <div class="card__body">
+              <span class="card__categoria">Cuidado Personal</span>
+              <h3 class="card__titulo">Discos Desmaquillantes</h3>
+              <p class="card__precio">$20.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 14 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-14" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-14" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Mochila_de_Cañamo.jpg" alt="Mochila de Cáñamo">
+            <div class="card__body">
+              <span class="card__categoria">Moda</span>
+              <h3 class="card__titulo">Mochila de Cáñamo</h3>
+              <p class="card__precio">$85.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 15 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--agotado">Agotado</span>
+            <input type="checkbox" id="fav-15" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-15" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Esponjas_de_luffa.webp" alt="Esponjas de Luffa">
+            <div class="card__body">
+              <span class="card__categoria">Hogar</span>
+              <h3 class="card__titulo">Esponjas de Luffa</h3>
+              <p class="card__precio">$12.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 16 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-16" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-16" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Lampara_de_Micelio.webp" alt="Lámpara de Micelio">
+            <div class="card__body">
+              <span class="card__categoria">Hogar</span>
+              <h3 class="card__titulo">Lámpara de Micelio</h3>
+              <p class="card__precio">$95.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 17 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-17" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-17" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Maquinilla_de_Afeitar.jpg" alt="Maquinilla de Afeitar">
+            <div class="card__body">
+              <span class="card__categoria">Cuidado Personal</span>
+              <h3 class="card__titulo">Maquinilla de Afeitar</h3>
+              <p class="card__precio">$42.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 18 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-18" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-18" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Panela_Organica.jpeg" alt="Panela Orgánica">
+            <div class="card__body">
+              <span class="card__categoria">Alimentos</span>
+              <h3 class="card__titulo">Panela Orgánica</h3>
+              <p class="card__precio">$11.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 19 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-19" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-19" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Protector_Solar_Mineral.webp" alt="Protector Solar Mineral">
+            <div class="card__body">
+              <span class="card__categoria">Cuidado Personal</span>
+              <h3 class="card__titulo">Protector Solar Mineral</h3>
+              <p class="card__precio">$48.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 20 -->
+          <article class="card card--producto card--hover">
+            <span class="badge badge--stock">En Stock</span>
+            <input type="checkbox" id="fav-20" class="fav-toggle" aria-label="Añadir a favoritos">
+            <label for="fav-20" class="btn-favorito" title="Favorito">❤</label>
+            <img class="card__img" src="../img/products/Vela _de_Cera.webp" alt="Vela de Cera">
+            <div class="card__body">
+              <span class="card__categoria">Hogar</span>
+              <h3 class="card__titulo">Vela de Cera</h3>
+              <p class="card__precio">$26.000 COP</p>
+              <a href="#" class="btn btn--small">Comprar</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Paginación Visual -->
+        <nav class="paginacion" aria-label="Paginación de productos">
+          <a href="#" class="paginacion__btn paginacion__btn--disabled" aria-disabled="true">← Anterior</a>
+          <ul class="paginacion__lista">
+            <li><a href="#" class="paginacion__link paginacion__link--active" aria-current="page">1</a></li>
+            <li><a href="#" class="paginacion__link">2</a></li>
+            <li><a href="#" class="paginacion__link">3</a></li>
+          </ul>
+          <a href="#" class="paginacion__btn">Siguiente →</a>
+        </nav>
+      </section>
+    </div>
+  </main>
+
+    <!-- Footer común -->
+<footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <h3>EcoMarket</h3>
+        <p>Bucaramanga, Colombia</p>
+        <p>contacto@ecomarket.com</p>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Síguenos</h3>
+        <ul class="redes">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__copy">© 2026 EcoMarket. Todos los derechos reservados</p>
+</footer>
+</body>
+</html>
