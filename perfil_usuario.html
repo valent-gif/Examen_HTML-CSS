@@ -1,0 +1,396 @@
+
+
+  <!-- Encabezado común -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="../index.html" class="logo">🌿 EcoMarket</a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="sobre-nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__acciones">
+        <a href="productos.html#buscador" aria-label="Buscar">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+        </a>
+        <a href="perfil.html" class="perfil-enlace activo" aria-label="Mi Perfil" title="Mi Perfil">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#27ae60"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T226-378q62-31 126-46.5T480-440q64 0 128 15.5T734-378q31 15 48.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+        </a>
+        <a href="carrito.html" class="carrito-enlace" aria-label="Carrito de compras con 3 artículos">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg>
+          <span class="carrito-contador">3</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="perfil-page">
+    <!-- Migas de pan (Breadcrumbs) -->
+    <nav class="migas-pan" aria-label="Ruta de navegación">
+      <div class="migas-pan__inner">
+        <a href="../index.html">Inicio</a>
+        <span class="migas-pan__separador">/</span>
+        <span aria-current="page">Mi Perfil Ecológico</span>
+      </div>
+    </nav>
+
+    <!-- Tarjeta de Cabecera del Perfil con Estadísticas de Impacto -->
+    <section class="perfil-header-card" aria-label="Información general del usuario">
+      <div class="perfil-usuario-box">
+        <div class="perfil-avatar-wrapper">
+          <img src="../img/icons/avatar-usuaria.svg" alt="Avatar de Valentina Rojas" class="perfil-avatar-img">
+          <span class="avatar-nivel-badge" title="Nivel Guardián">🌱</span>
+        </div>
+        <div class="perfil-usuario-info">
+          <div class="perfil-nombre-fila">
+            <h1>Valentina Rojas Moratto</h1>
+            <span class="badge badge--stock">Guardián del Planeta</span>
+          </div>
+          <p class="perfil-meta">Bucaramanga, Santander · Miembro desde Enero 2024</p>
+          <p class="perfil-bio">Comprometida con el estilo de vida zero-waste y el consumo consciente local.</p>
+        </div>
+      </div>
+
+      <!-- Cuadrícula de Métricas de Impacto Positivo -->
+      <div class="perfil-stats-grid">
+        <div class="stat-card">
+          <span class="stat-icono">📦</span>
+          <span class="stat-valor">14</span>
+          <span class="stat-etiqueta">Pedidos Sostenibles</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icono">♻️</span>
+          <span class="stat-valor">86 kg</span>
+          <span class="stat-etiqueta">Plástico Evitado</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icono">🌳</span>
+          <span class="stat-valor">5</span>
+          <span class="stat-etiqueta">Árboles Sembrados</span>
+        </div>
+        <div class="stat-card stat-card--destacado">
+          <span class="stat-icono">✨</span>
+          <span class="stat-valor">1.250</span>
+          <span class="stat-etiqueta">EcoPuntos Acumulados</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sistema de Pestañas Interactivas Pure CSS -->
+    <section class="perfil-seccion-tabs">
+      <div class="tabs-contenedor">
+
+        <!-- Radios ocultos controladores de pestañas -->
+        <input type="radio" id="tab-pedidos-radio" name="perfil-tabs" class="tab-radio" checked>
+        <input type="radio" id="tab-datos-radio" name="perfil-tabs" class="tab-radio">
+        <input type="radio" id="tab-ecopuntos-radio" name="perfil-tabs" class="tab-radio">
+        <input type="radio" id="tab-direcciones-radio" name="perfil-tabs" class="tab-radio">
+
+        <!-- Barra de Navegación de Pestañas -->
+        <nav class="tabs-nav" aria-label="Secciones del perfil">
+          <label for="tab-pedidos-radio" class="tab-label tab-label--pedidos">
+            <span class="tab-icono">🛍️</span> Mis Pedidos
+          </label>
+          <label for="tab-datos-radio" class="tab-label tab-label--datos">
+            <span class="tab-icono">👤</span> Datos Personales
+          </label>
+          <label for="tab-ecopuntos-radio" class="tab-label tab-label--ecopuntos">
+            <span class="tab-icono">🌟</span> EcoPuntos & Recompensas
+          </label>
+          <label for="tab-direcciones-radio" class="tab-label tab-label--direcciones">
+            <span class="tab-icono">📍</span> Direcciones de Entrega
+          </label>
+        </nav>
+
+        <!-- Contenidos de las Pestañas -->
+        <div class="tabs-contenido-wrapper">
+
+          <!-- Pestaña 1: Mis Pedidos -->
+          <div class="tab-panel tab-panel--pedidos">
+            <div class="panel-header">
+              <h2>Historial de Pedidos Responsables</h2>
+              <p>Seguimiento de tus compras y comprobantes de compensación de CO₂.</p>
+            </div>
+
+            <div class="pedidos-lista">
+
+              <!-- Pedido 1 (Activo) -->
+              <article class="pedido-card">
+                <div class="pedido-card__header">
+                  <div>
+                    <span class="pedido-numero">Pedido #ECO-2026-8941</span>
+                    <span class="pedido-fecha">Realizado el 27 de Octubre, 2026</span>
+                  </div>
+                  <span class="badge badge--stock">En Camino 🚚</span>
+                </div>
+
+                <div class="pedido-card__cuerpo">
+                  <div class="pedido-imagenes">
+                    <img src="../img/products/Botella_Reutilizable.webp" alt="Botella Térmica" class="pedido-miniatura">
+                    <img src="../img/products/Bolsa_de_tela.webp" alt="Bolsa de Tela" class="pedido-miniatura">
+                    <img src="../img/products/Capillo_de_Bambu.webp" alt="Cepillo de Bambú" class="pedido-miniatura">
+                  </div>
+                  <div class="pedido-resumen-info">
+                    <p><strong>3 artículos</strong> · Total: <strong>$97.000 COP</strong></p>
+                    <p class="pedido-eco-nota">🌱 Envío neutro en carbono compensado con 1 árbol en Santander.</p>
+                  </div>
+                </div>
+
+                <div class="pedido-card__footer">
+                  <a href="#rastreo-modal" class="btn btn--small">Rastrear Envío</a>
+                  <a href="carrito.html" class="btn btn--outline btn--small">Repetir Pedido</a>
+                </div>
+              </article>
+
+              <!-- Pedido 2 (Entregado) -->
+              <article class="pedido-card">
+                <div class="pedido-card__header">
+                  <div>
+                    <span class="pedido-numero">Pedido #ECO-2026-7512</span>
+                    <span class="pedido-fecha">14 de Septiembre, 2026</span>
+                  </div>
+                  <span class="badge badge--entregado">Entregado ✓</span>
+                </div>
+
+                <div class="pedido-card__cuerpo">
+                  <div class="pedido-imagenes">
+                    <img src="../img/products/Envases_de_Vidrio.jpg" alt="Envases de Vidrio" class="pedido-miniatura">
+                    <img src="../img/products/Cafe_Organico.jpg" alt="Café Orgánico" class="pedido-miniatura">
+                  </div>
+                  <div class="pedido-resumen-info">
+                    <p><strong>2 artículos</strong> · Total: <strong>$80.000 COP</strong></p>
+                    <p class="pedido-eco-nota">🌱 Entregado en empaque compostable zero-waste.</p>
+                  </div>
+                </div>
+
+                <div class="pedido-card__footer">
+                  <a href="producto.html" class="btn btn--outline btn--small">Dejar Opinión</a>
+                  <a href="carrito.html" class="btn btn--small">Comprar de nuevo</a>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Pestaña 2: Datos Personales & Preferencias -->
+          <div class="tab-panel tab-panel--datos">
+            <div class="panel-header">
+              <h2>Tus Datos y Preferencias Ecológicas</h2>
+              <p>Mantén tu información al día para agilizar tus despachos sin papel.</p>
+            </div>
+
+            <form class="perfil-form" action="#perfil-actualizado">
+              <div class="form-grid-dos">
+                <div class="form-grupo">
+                  <label for="perfil-nombre">Nombre completo *</label>
+                  <input type="text" id="perfil-nombre" class="form-control" value="Valentina Rojas Moratto" required minlength="3">
+                  <span class="form-ayuda">Mínimo 3 caracteres.</span>
+                </div>
+                <div class="form-grupo">
+                  <label for="perfil-email">Correo electrónico *</label>
+                  <input type="email" id="perfil-email" class="form-control" value="valentina@correo.com" required>
+                  <span class="form-ayuda">Correo registrado y verificado.</span>
+                </div>
+              </div>
+
+              <div class="form-grid-dos">
+                <div class="form-grupo">
+                  <label for="perfil-tel">Teléfono celular *</label>
+                  <input type="tel" id="perfil-tel" class="form-control" value="3157894561" required pattern="[0-9]{10}">
+                </div>
+                <div class="form-grupo">
+                  <label for="perfil-ciudad">Ciudad de residencia *</label>
+                  <input type="text" id="perfil-ciudad" class="form-control" value="Bucaramanga, Santander" required>
+                </div>
+              </div>
+
+              <!-- Preferencias de sostenibilidad -->
+              <fieldset class="perfil-preferencias-box">
+                <legend class="filtro-grupo__titulo">Preferencias de Compromiso Verde</legend>
+                <label class="filtro-opcion">
+                  <input type="checkbox" checked> Recibir recordatorios para reciclaje y recarga de envases en tienda física.
+                </label>
+                <label class="filtro-opcion">
+                  <input type="checkbox" checked> Despacho agrupado (esperar para consolidar envíos y reducir emisiones de transporte).
+                </label>
+                <label class="filtro-opcion">
+                  <input type="checkbox" checked> Facturación electrónica 100% digital (cero papel impreso).
+                </label>
+              </fieldset>
+
+              <button type="submit" class="btn btn--guardar">Guardar Cambios</button>
+
+              <p id="perfil-actualizado" class="alerta-exito">
+                ✓ ¡Tus datos y preferencias han sido actualizados exitosamente!
+              </p>
+            </form>
+          </div>
+
+          <!-- Pestaña 3: EcoPuntos & Recompensas -->
+          <div class="tab-panel tab-panel--ecopuntos">
+            <div class="panel-header">
+              <h2>Programa de Lealtad Verde</h2>
+              <p>Gana puntos con cada compra responsable y canjéalos por descuentos o impacto ambiental directo.</p>
+            </div>
+
+            <div class="ecopuntos-resumen-banner">
+              <div class="ecopuntos-saldo-col">
+                <span class="ecopuntos-titulo-saldo">Tu saldo disponible:</span>
+                <span class="ecopuntos-puntos-numero">1.250 <small>EcoPuntos</small></span>
+                <span class="badge badge--stock">Nivel 2: Guardián</span>
+              </div>
+              <div class="ecopuntos-progreso-col">
+                <p>Te faltan <strong>250 puntos</strong> para subir al nivel <strong>Embajador del Bosque</strong> y obtener envíos gratis ilimitados.</p>
+                <div class="barra-contenedor">
+                  <div class="barra-relleno" style="width: 83%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="recompensas-seccion-titulo">Recompensas Disponibles para Canjear</h3>
+            <div class="recompensas-grid">
+
+              <!-- Recompensa 1 -->
+              <article class="recompensa-card card card--hover">
+                <span class="recompensa-costo">500 pts</span>
+                <span class="recompensa-icono">🎟️</span>
+                <h3>Cupón de $15.000 COP</h3>
+                <p>Válido para cualquier pedido en el catálogo de EcoMarket sin monto mínimo.</p>
+                <a href="#recompensa-canjeada" class="btn btn--small btn--full">Canjear Cupón</a>
+              </article>
+
+              <!-- Recompensa 2 -->
+              <article class="recompensa-card card card--hover">
+                <span class="recompensa-costo">800 pts</span>
+                <span class="recompensa-icono">🌲</span>
+                <h3>Siembra de 2 Árboles</h3>
+                <p>Plantación de especies nativas en el Páramo de Santurbán con certificado a tu nombre.</p>
+                <a href="#recompensa-canjeada" class="btn btn--small btn--full">Sembrar Árboles</a>
+              </article>
+
+              <!-- Recompensa 3 -->
+              <article class="recompensa-card card card--hover">
+                <span class="recompensa-costo">1.200 pts</span>
+                <span class="recompensa-icono">🥢</span>
+                <h3>Set de Cubiertos de Bambú</h3>
+                <p>Kit portátil de tenedor, cuchillo, cuchara y pajilla reutilizable en funda de lino.</p>
+                <a href="#recompensa-canjeada" class="btn btn--small btn--full">Reclamar Premio</a>
+              </article>
+
+            </div>
+
+            <p id="recompensa-canjeada" class="alerta-exito">
+              🎉 ¡Felicidades! Tu recompensa ha sido canjeada con éxito. Revisa tu correo electrónico para las instrucciones.
+            </p>
+          </div>
+
+          <!-- Pestaña 4: Direcciones de Entrega -->
+          <div class="tab-panel tab-panel--direcciones">
+            <div class="panel-header">
+              <h2>Tus Direcciones de Despacho</h2>
+              <p>Gestiona tus puntos de entrega para envíos sin demoras ni emisiones extra.</p>
+            </div>
+
+            <div class="direcciones-grid">
+
+              <article class="direccion-card direccion-card--principal">
+                <span class="badge badge--stock">Predeterminada</span>
+                <h3>Casa (Bucaramanga)</h3>
+                <p><strong>Destinataria:</strong> Valentina Rojas Moratto</p>
+                <p>Calle 36 # 24-10, Apto 502</p>
+                <p>Barrio Cabecera del Llano, Bucaramanga, Santander</p>
+                <p>Tel: 315 789 4561</p>
+                <div class="direccion-acciones">
+                  <a href="#direccion-modal" class="btn-enlace">Editar</a>
+                </div>
+              </article>
+
+              <article class="direccion-card">
+                <h3>Oficina / Taller</h3>
+                <p><strong>Destinataria:</strong> Valentina Rojas Moratto</p>
+                <p>Carrera 19 # 35-02, Oficina 301</p>
+                <p>Centro, Bucaramanga, Santander</p>
+                <p>Tel: 315 789 4561</p>
+                <div class="direccion-acciones">
+                  <a href="#direccion-modal" class="btn-enlace">Editar</a>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de Rastreo con Pure CSS (:target) -->
+  <div id="rastreo-modal" class="modal-overlay" role="dialog" aria-labelledby="rastreo-titulo">
+    <div class="modal-contenido">
+      <a href="#" class="modal-cerrar" aria-label="Cerrar">&times;</a>
+      <div class="modal-header">
+        <span class="logo">🌿 EcoMarket Logística Verde</span>
+        <h2 id="rastreo-titulo">Estado de tu Envío Carbono Neutral</h2>
+        <p class="modal-subtitulo">Guía: <strong>#ECO-8941-BGA</strong> · Transportadora Ecológica</p>
+      </div>
+
+      <div class="rastreo-timeline">
+        <div class="timeline-paso timeline-paso--completado">
+          <span class="paso-icono">✓</span>
+          <div class="paso-info">
+            <h4>Pedido Confirmado y Empacado</h4>
+            <p>27 Oct, 09:30 AM · En caja zero-waste en bodega Bucaramanga.</p>
+          </div>
+        </div>
+        <div class="timeline-paso timeline-paso--activo">
+          <span class="paso-icono">🚚</span>
+          <div class="paso-info">
+            <h4>En Tránsito con Vehículo Eléctrico</h4>
+            <p>27 Oct, 02:15 PM · En ruta hacia tu dirección en Cabecera.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <span class="paso-icono">📦</span>
+          <div class="paso-info">
+            <h4>Entrega Estimada</h4>
+            <p>Mañana, 28 Oct antes de las 12:00 PM.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página común -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__col">
+        <h3>🌿 EcoMarket</h3>
+        <p>Haciendo el consumo responsable fácil y accesible desde Bucaramanga para toda Colombia.</p>
+      </div>
+      <div class="footer__col">
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Catálogo</a></li>
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Contacto</h3>
+        <p>Email: contacto@ecomarket.com</p>
+        <p>Bucaramanga, Santander</p>
+      </div>
+    </div>
+    <p class="footer__copy">&copy; 2026 EcoMarket. Compra responsable, vive sostenible.</p>
+  </footer>
+
+</body>
+</html>
+
