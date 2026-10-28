@@ -1495,6 +1495,534 @@
   font-size: 0.95rem;
 }
 
+/*-- COMPONENTES DE PERFIL DE USUARIO --*/
+
+/* Icono de Perfil en Header */
+.perfil-enlace {
+  display: inline-flex;
+  align-items: center;
+  color: var(--texto);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.perfil-enlace:hover,
+.perfil-enlace.activo {
+  color: var(--verde-oscuro);
+  transform: scale(1.08);
+}
+
+/* Header del Perfil */
+.perfil-usuario-box {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.perfil-avatar-wrapper {
+  position: relative;
+  width: 78px;
+  height: 78px;
+  flex-shrink: 0;
+}
+
+.perfil-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e8f8f0;
+  border: 3px solid var(--verde-oscuro);
+}
+
+.avatar-nivel-badge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 26px;
+  height: 26px;
+  background: var(--blanco);
+  border-radius: 50%;
+  box-shadow: var(--sombra);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  border: 1px solid #d4efdf;
+}
+
+.perfil-usuario-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.perfil-nombre-fila {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.perfil-nombre-fila h1 {
+  font-size: 1.4rem;
+  color: var(--texto);
+}
+
+.perfil-meta {
+  font-size: 0.85rem;
+  color: var(--gris);
+}
+
+.perfil-bio {
+  font-size: 0.92rem;
+  color: var(--texto);
+  margin-top: 0.2rem;
+}
+
+/* Métricas del Perfil */
+.stat-card {
+  background: #f9fbf9;
+  border: 1px solid #edf2f7;
+  border-radius: var(--radio);
+  padding: 0.9rem 0.6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card--destacado {
+  background: #eafaf1;
+  border-color: #c3e6cb;
+}
+
+.stat-icono {
+  font-size: 1.3rem;
+}
+
+.stat-valor {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--verde-oscuro);
+}
+
+.stat-etiqueta {
+  font-size: 0.72rem;
+  color: var(--gris);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Pestañas Pure CSS */
+.tab-radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tab-label {
+  padding: 1rem 1.4rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--gris);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  user-select: none;
+}
+
+.tab-label:hover {
+  color: var(--verde-oscuro);
+  background: #f4fbf7;
+}
+
+.tab-icono {
+  font-size: 1.1rem;
+}
+
+/* Indicadores de pestaña activa */
+#tab-pedidos-radio:checked ~ .tabs-nav .tab-label--pedidos,
+#tab-datos-radio:checked ~ .tabs-nav .tab-label--datos,
+#tab-ecopuntos-radio:checked ~ .tabs-nav .tab-label--ecopuntos,
+#tab-direcciones-radio:checked ~ .tabs-nav .tab-label--direcciones {
+  color: var(--verde-oscuro);
+  border-bottom-color: var(--verde-oscuro);
+  background: var(--blanco);
+  font-weight: 700;
+}
+
+/* Paneles de contenido */
+.tab-panel {
+  display: none;
+}
+
+#tab-pedidos-radio:checked ~ .tabs-contenido-wrapper .tab-panel--pedidos,
+#tab-datos-radio:checked ~ .tabs-contenido-wrapper .tab-panel--datos,
+#tab-ecopuntos-radio:checked ~ .tabs-contenido-wrapper .tab-panel--ecopuntos,
+#tab-direcciones-radio:checked ~ .tabs-contenido-wrapper .tab-panel--direcciones {
+  display: block;
+  animation: aparecer 0.35s ease-out;
+}
+
+.panel-header {
+  margin-bottom: 1.8rem;
+}
+
+.panel-header h2 {
+  font-size: 1.35rem;
+  color: var(--verde-oscuro);
+  margin-bottom: 0.3rem;
+}
+
+.panel-header p {
+  color: var(--gris);
+  font-size: 0.92rem;
+}
+
+/* Tarjetas de Pedidos */
+.pedidos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.pedido-card {
+  background: #fafcfa;
+  border: 1px solid #edf2f7;
+  border-radius: var(--radio);
+  padding: 1.4rem;
+}
+
+.pedido-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid #eef2f5;
+}
+
+.pedido-numero {
+  font-weight: 700;
+  color: var(--texto);
+  font-size: 1.05rem;
+  display: block;
+}
+
+.pedido-fecha {
+  font-size: 0.82rem;
+  color: var(--gris);
+}
+
+.badge--entregado {
+  background: #27ae60;
+  position: static;
+}
+
+.pedido-card__cuerpo {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.1rem 0;
+  flex-wrap: wrap;
+}
+
+.pedido-imagenes {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pedido-miniatura {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: var(--blanco);
+}
+
+.pedido-resumen-info p {
+  font-size: 0.92rem;
+  color: var(--texto);
+}
+
+.pedido-eco-nota {
+  font-size: 0.82rem;
+  color: var(--verde-oscuro);
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.pedido-card__footer {
+  display: flex;
+  gap: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #eef2f5;
+  flex-wrap: wrap;
+}
+
+/* Formulario de Perfil */
+.perfil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form-grid-dos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .form-grid-dos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.perfil-preferencias-box {
+  background: #fbfdfb;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radio);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.btn--guardar {
+  align-self: flex-start;
+}
+
+/* Banner de EcoPuntos */
+.ecopuntos-resumen-banner {
+  background: #eafaf1;
+  border: 1px solid #c3e6cb;
+  border-radius: var(--radio);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+  .ecopuntos-resumen-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ecopuntos-saldo-col {
+    flex: 1;
+  }
+
+  .ecopuntos-progreso-col {
+    flex: 1.4;
+  }
+}
+
+.ecopuntos-titulo-saldo {
+  font-size: 0.85rem;
+  color: #196f3d;
+  font-weight: 600;
+  display: block;
+}
+
+.ecopuntos-puntos-numero {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--verde-oscuro);
+  display: block;
+  line-height: 1.1;
+  margin: 0.3rem 0;
+}
+
+.ecopuntos-puntos-numero small {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e7e34;
+}
+
+.ecopuntos-progreso-col p {
+  font-size: 0.88rem;
+  color: var(--texto);
+  margin-bottom: 0.6rem;
+}
+
+.recompensas-seccion-titulo {
+  font-size: 1.15rem;
+  color: var(--verde-oscuro);
+  margin-bottom: 1.2rem;
+}
+
+.recompensas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .recompensas-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.recompensa-card {
+  padding: 1.6rem 1.2rem;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.recompensa-costo {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+}
+
+.recompensa-icono {
+  font-size: 2.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.recompensa-card h3 {
+  font-size: 1.05rem;
+  color: var(--texto);
+}
+
+.recompensa-card p {
+  font-size: 0.85rem;
+  color: var(--gris);
+  margin-bottom: 0.5rem;
+}
+
+/* Direcciones */
+.direcciones-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .direcciones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.direccion-card {
+  background: var(--blanco);
+  border: 2px solid #edf2f7;
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.direccion-card--principal {
+  border-color: var(--verde-oscuro);
+  background: #fbfdfb;
+}
+
+.direccion-card h3 {
+  font-size: 1.1rem;
+  color: var(--texto);
+}
+
+.direccion-card p {
+  font-size: 0.9rem;
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+.direccion-acciones {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #edf2f7;
+}
+
+.btn-enlace {
+  font-size: 0.9rem;
+  color: var(--verde-oscuro);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Timeline de Rastreo */
+.rastreo-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.timeline-paso {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.paso-icono {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: var(--gris);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.timeline-paso--completado .paso-icono {
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+}
+
+.timeline-paso--activo .paso-icono {
+  background: #eafaf1;
+  border: 2px solid var(--verde-oscuro);
+  color: var(--verde-oscuro);
+}
+
+.paso-info h4 {
+  font-size: 0.95rem;
+  color: var(--texto);
+  margin-bottom: 0.2rem;
+}
+
+.paso-info p {
+  font-size: 0.82rem;
+  color: var(--gris);
+}
+
+
 
 
 
