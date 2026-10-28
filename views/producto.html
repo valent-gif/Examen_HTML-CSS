@@ -57,16 +57,29 @@
 
         <!-- Galería de Imágenes (Interactiva con Pure CSS) -->
         <div class="producto-galeria">
+          <input type="radio" name="galeria" id="galeria-1" class="galeria-radio" checked>
+          <input type="radio" name="galeria" id="galeria-2" class="galeria-radio">
+          <input type="radio" name="galeria" id="galeria-3" class="galeria-radio">
+
           <div class="galeria-visor">
             <span class="badge badge--stock">En Stock</span>
             <input type="checkbox" id="fav-detalle" class="fav-toggle" aria-label="Añadir a favoritos">
             <label for="fav-detalle" class="btn-favorito" title="Favorito">❤</label>
-            <img id="img-principal" class="galeria-visor__img" src="../img/products/Botella_Reutilizable.webp" alt="Botella Reutilizable de Acero Inoxidable en verde bosque">
+            <img class="galeria-visor__img galeria-visor__img--1" src="../img/products/Botella_Reutilizable.webp" alt="Botella Reutilizable de Acero Inoxidable - Vista frontal">
+            <img class="galeria-visor__img galeria-visor__img--2" src="../img/products/Botella_Reutilizable.webp" alt="Botella Reutilizable de Acero Inoxidable - Detalle de acabado y tapa">
+            <img class="galeria-visor__img galeria-visor__img--3" src="../img/products/Botella_Reutilizable.webp" alt="Botella Reutilizable de Acero Inoxidable - Vista en escala">
           </div>
-          <div class="galeria-miniaturas" role="region" aria-label="Vistas alternativas">
-            <img class="miniatura miniatura--activa" src="../img/products/Botella_Reutilizable.webp" alt="Vista frontal">
-            <img class="miniatura" src="../img/products/Botella_Reutilizable.webp" alt="Detalle de tapa hermética">
-            <img class="miniatura" src="../img/products/Botella_Reutilizable.webp" alt="En contexto de uso">
+
+          <div class="galeria-miniaturas" role="region" aria-label="Selector de vistas alternativas">
+            <label for="galeria-1" class="miniatura-label">
+              <img class="miniatura" src="../img/products/Botella_Reutilizable.webp" alt="Vista 1">
+            </label>
+            <label for="galeria-2" class="miniatura-label">
+              <img class="miniatura" src="../img/products/Botella_Reutilizable.webp" alt="Vista 2">
+            </label>
+            <label for="galeria-3" class="miniatura-label">
+              <img class="miniatura" src="../img/products/Botella_Reutilizable.webp" alt="Vista 3">
+            </label>
           </div>
         </div>
 
