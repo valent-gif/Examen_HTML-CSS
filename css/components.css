@@ -510,5 +510,427 @@
   height: 22px;
 }
 
+/*-- COMPONENTES DE DETALLE DE PRODUCTO --*/
+
+/* Migas de pan */
+.migas-pan {
+  padding: 0.8rem 0 1.5rem;
+  font-size: 0.9rem;
+}
+
+.migas-pan__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--gris);
+}
+
+.migas-pan a {
+  color: var(--gris);
+  transition: color 0.2s ease;
+}
+
+.migas-pan a:hover {
+  color: var(--verde-oscuro);
+  text-decoration: underline;
+}
+
+.migas-pan__separador {
+  color: #b2bec3;
+}
+
+.migas-pan span[aria-current="page"] {
+  color: var(--verde-oscuro);
+  font-weight: 600;
+}
+
+/* Galería de Producto */
+.producto-galeria {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.galeria-visor {
+  position: relative;
+  border-radius: var(--radio);
+  overflow: hidden;
+  background: #fafafa;
+  border: 1px solid #ebebeb;
+}
+
+.galeria-visor__img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.galeria-visor:hover .galeria-visor__img {
+  transform: scale(1.04);
+}
+
+.galeria-miniaturas {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.miniatura {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  background: #fafafa;
+}
+
+.miniatura:hover,
+.miniatura--activa {
+  border-color: var(--verde-oscuro);
+  transform: translateY(-2px);
+}
+
+/* Información del Producto */
+.producto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.producto-info__titulo {
+  font-size: 1.6rem;
+  color: var(--texto);
+}
+
+@media (min-width: 900px) {
+  .producto-info__titulo {
+    font-size: 2rem;
+  }
+}
+
+.producto-info__calificacion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.calificacion-promedio {
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.calificacion-conteo {
+  color: var(--gris);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.calificacion-conteo:hover {
+  color: var(--verde-oscuro);
+}
+
+/* Precios */
+.producto-info__precio-bloque {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.producto-precio-actual {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--verde-oscuro);
+}
+
+.producto-precio-anterior {
+  font-size: 1.2rem;
+  color: var(--gris);
+  text-decoration: line-through;
+}
+
+.badge--descuento {
+  position: static;
+  background: var(--rojo);
+  font-size: 0.85rem;
+  padding: 0.2rem 0.6rem;
+}
+
+/* Caja de Impacto Ecológico */
+.impacto-ecologico-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #eafaf1;
+  border-left: 4px solid var(--verde-oscuro);
+  padding: 0.9rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  color: #1e6b37;
+}
+
+.impacto-icono {
+  font-size: 1.5rem;
+}
+
+.producto-info__descripcion {
+  color: var(--texto);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Selectores de Atributos */
+.producto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.selector-grupo {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.selector-titulo {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--texto);
+}
+
+.selector-opciones {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.selector-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.selector-chip {
+  padding: 0.45rem 1rem;
+  border: 2px solid #dfe6e9;
+  border-radius: 20px;
+  background: var(--blanco);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.selector-chip:hover {
+  border-color: var(--verde-oscuro);
+}
+
+.selector-input:checked + .selector-chip {
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  border-color: var(--verde-oscuro);
+}
+
+/* Selector de Colores */
+.selector-colores {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.color-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.color-muestra {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  outline: 2px solid transparent;
+  transition: transform 0.2s ease, outline-color 0.2s ease;
+  user-select: none;
+}
+
+.color-muestra:hover {
+  transform: scale(1.1);
+}
+
+.color-muestra--verde {
+  background-color: #27ae60;
+}
+
+.color-muestra--acero {
+  background-color: #bdc3c7;
+}
+
+.color-muestra--beige {
+  background-color: #d7ccc8;
+}
+
+.color-input:checked + .color-muestra {
+  outline-color: var(--verde-oscuro);
+  outline-offset: 3px;
+}
+
+/* Acciones de Compra */
+.producto-acciones {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.cantidad-selector {
+  width: 80px;
+}
+
+.cantidad-input {
+  width: 100%;
+  padding: 0.65rem 0.5rem;
+  border: 2px solid #dfe6e9;
+  border-radius: var(--radio);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--texto);
+  outline: none;
+}
+
+.cantidad-input:focus {
+  border-color: var(--verde-oscuro);
+}
+
+.btn--carrito {
+  flex: 1;
+  text-align: center;
+}
+
+.btn--comprar-ahora {
+  width: 100%;
+  text-align: center;
+}
+
+/* Garantías Ecológicas */
+.garantias-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  margin-top: 0.5rem;
+}
+
+.garantia-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--texto);
+}
+
+.garantia-icono {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Acordeón Pure CSS con <details> y <summary> */
+.acordeon-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.acordeon-item {
+  background: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+.acordeon-titulo {
+  padding: 1.2rem 1.5rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--verde-oscuro);
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.acordeon-titulo::-webkit-details-marker {
+  display: none;
+}
+
+.acordeon-titulo::after {
+  content: "▾";
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  color: var(--verde-oscuro);
+}
+
+.acordeon-item[open] .acordeon-titulo::after {
+  transform: rotate(180deg);
+}
+
+.acordeon-titulo:hover {
+  background: #f9fbf9;
+}
+
+.acordeon-cuerpo {
+  padding: 0 1.5rem 1.5rem;
+  line-height: 1.7;
+  color: var(--texto);
+  font-size: 0.96rem;
+}
+
+.lista-especificaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.lista-especificaciones li {
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.lista-especificaciones li::before {
+  content: "•";
+  color: var(--verde-oscuro);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Clases de utilidad */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
 
 
