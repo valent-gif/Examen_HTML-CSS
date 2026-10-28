@@ -443,11 +443,12 @@
   max-width: var(--max-ancho);
   margin: 0 auto;
   padding: 1.5rem 1rem 4rem;
+  background;
 }
 
 .perfil-header-card {
-  background: var(--blanco);
-  border-radius: var(--radio);
+  background: var(--gris);
+  border-radius: var(--radio)
   padding: 1.8rem;
   box-shadow: var(--sombra);
   margin-bottom: 2.5rem;
@@ -463,7 +464,7 @@
 }
 
 .tabs-contenedor {
-  background: var(--blanco);
+  background: var(--gris );
   border-radius: var(--radio);
   box-shadow: var(--sombra);
   overflow: hidden;
