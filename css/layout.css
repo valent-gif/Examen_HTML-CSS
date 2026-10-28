@@ -374,3 +374,68 @@
   }
 }
 
+/*--Página del Carrito de Compras--*/
+.carrito-page {
+  max-width: var(--max-ancho);
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+
+.carrito-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .carrito-layout {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .carrito-resumen-seccion {
+    position: sticky;
+    top: 90px;
+  }
+}
+
+/*--Modal Overlay con Pure CSS (:target)--*/
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.modal-overlay:target {
+  display: flex;
+  animation: aparecer 0.3s ease;
+}
+
+.modal-contenido {
+  background: var(--blanco);
+  border-radius: var(--radio);
+  padding: 2rem 1.5rem;
+  max-width: 620px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+@media (min-width: 600px) {
+  .modal-contenido {
+    padding: 2.5rem;
+  }
+}
+
+
